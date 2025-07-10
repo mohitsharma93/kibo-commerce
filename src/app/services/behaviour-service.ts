@@ -17,10 +17,17 @@ export class BehaviourService {
   });
   public cart$ = this.cart.asObservable();
 
+  protected scrollToCart = new BehaviorSubject<boolean>(false);
+  public scrollToCart$ = this.scrollToCart.asObservable();
+
   constructor(
     @Inject('FAKEAPI_BASE_URL') private fakeapiBaseUrl: string,
     private http: HttpClient
   ) {}
+
+  setScrollToCart(value: boolean) {
+    this.scrollToCart.next(value);
+  }
 
   public getAllProducts() {
     this.http

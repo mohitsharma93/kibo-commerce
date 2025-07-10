@@ -4,6 +4,7 @@ import { CartItems } from '../types/products';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { elementIsVisibleInViewport } from '../utils';
 
 @Component({
   standalone: true,
@@ -21,4 +22,8 @@ export class HeaderComponent {
     map((cart) =>  cart.items.length ),
     takeUntilDestroyed(this.destroyRef)
   );
+
+    public goToCartView() {
+      this.behaviourService.setScrollToCart(true);
+    }
 }
