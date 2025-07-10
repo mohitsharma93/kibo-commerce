@@ -47,6 +47,22 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+              "polyfills": ["zone.js", "zone.js/testing"],
+              "tsConfig": "tsconfig.spec.json",
+              "inlineStyleLanguage": "css",
+              "assets": [
+                  {
+                      "glob": "**/*",
+                      "input": "assets"
+                  }
+              ],
+              "styles": ["src/styles.css"],
+              "scripts": []
+          }
         }
       },
       "prefix": "app",

@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   private destroyRef = inject(DestroyRef);
   // constructor(private behaviourService: BehaviourService) {}
 
-  protected cart$: Observable<CartItems> = this.behaviourService.cart$.pipe(
+  public cart$: Observable<CartItems> = this.behaviourService.cart$.pipe(
     takeUntilDestroyed(this.destroyRef)
   );
 

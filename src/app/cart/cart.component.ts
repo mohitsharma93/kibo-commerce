@@ -21,15 +21,15 @@ export class CartComponent {
     private destroyRef = inject(DestroyRef);
     private confirm = inject(ConfirmationPopupService);
 
-    protected cart$: Observable<CartItems> = this.behaviourService.cart$.pipe(
+    public cart$: Observable<CartItems> = this.behaviourService.cart$.pipe(
         takeUntilDestroyed(this.destroyRef)
     );
 
-    protected updateQty(index: number, event: any) {
+    public updateQty(index: number, event: any) {
         this.behaviourService.updateQuntity(index, event.target.value);
     }
 
-    protected async removeItem(index: number) {
+    public async removeItem(index: number) {
         console.log('removeItem', index);
         const confirmed = await this.confirm.show('Do you want to delete this item?');
         if (confirmed) {

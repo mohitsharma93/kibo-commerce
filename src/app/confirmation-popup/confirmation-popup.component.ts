@@ -30,7 +30,7 @@ export class ConfirmationPopupComponent implements OnInit, OnDestroy {
      * Emits `false` to the `decision` output to cancel the popup.
      * @param event The event that triggered this function.
      */
-    protected onBackdropClick(event: MouseEvent) {
+    public onBackdropClick(event: MouseEvent) {
         this.decision.emit(false);
     }
 

@@ -16,11 +16,11 @@ export class ProductListsComponent {
   private destroyRef = inject(DestroyRef);
 
   private behaviourService = inject(BehaviourService);
-  protected productLists$ = this.behaviourService.products$.pipe(
+  public productLists$ = this.behaviourService.products$.pipe(
     takeUntilDestroyed(this.destroyRef)
   );
 
-  protected addToCart(item: ProductsResponseModel) {
+  public addToCart(item: ProductsResponseModel) {
     this.behaviourService.addToCart(item);
   }
 }
