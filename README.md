@@ -4,7 +4,7 @@ A Angular project with Tailwind CSS for building modern Product Listing applicat
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v29.3 or higher)
+- [Node.js](https://nodejs.org/) (v20.3 or higher)
 - [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
 
 ## Setup
