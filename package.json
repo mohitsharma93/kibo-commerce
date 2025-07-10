@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test"
+    "test": "ng test",
+    "code-coverage": "ng test --no-watch --code-coverage"
   },
   "dependencies": {
     "@angular/animations": "^20.0.0",
