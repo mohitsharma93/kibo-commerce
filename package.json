@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "code-coverage": "ng test --no-watch --code-coverage"
+    "code-coverage": "ng test --no-watch --code-coverage",
+    "prod:doc": "ng build --configuration production --base-href ./docs/"
   },
   "dependencies": {
     "@angular/animations": "^20.0.0",
