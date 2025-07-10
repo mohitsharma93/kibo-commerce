@@ -1,0 +1,32 @@
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white px-6 py-4 flex items-center justify-between shadow"
+  
+>
+  <h1 class="text-2xl font-bold">Shopping Cart</h1>
+
+  <!-- Cart Icon -->
+  <button class="relative">
+    <svg
+      class="w-6 h-6 text-white"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 3h2l.4 2M7 13h14l-1.5 8H6L5 6H3"
+      ></path>
+    </svg>
+
+    <!-- Optional: Cart item count badge -->
+    <span
+      class="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center"
+      *ngIf="(cartItemLength$ | async) ?? 0 > 0"
+    >
+      {{cartItemLength$ | async}}
+    </span>
+  </button>
+</header>
