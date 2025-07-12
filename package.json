@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "code-coverage": "ng test --no-watch --code-coverage"
+    "build:prod": "npm run e2e:playwright && ng build",
+    "code-coverage": "ng test --no-watch --code-coverage",
+    "e2e:playwright": "npx playwright test ",
+    "e2e:playwright-ui": "npx playwright test --ui",
+    "e2e:playwright-report": "npx playwright show-report"
   },
   "dependencies": {
     "@angular/animations": "^20.0.0",
@@ -27,7 +31,9 @@
     "@angular/build": "^20.0.0",
     "@angular/cli": "^20.0.0",
     "@angular/compiler-cli": "^20.0.0",
+    "@playwright/test": "^1.54.0",
     "@types/jasmine": "^5.1.8",
+    "@types/node": "^24.0.12",
     "jasmine-core": "^5.8.0",
     "karma": "^6.4.4",
     "karma-chrome-launcher": "^3.2.0",
