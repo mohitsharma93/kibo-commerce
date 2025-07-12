@@ -5,12 +5,13 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { elementIsVisibleInViewport } from '../utils';
+import { FilterInputComponent } from "../filter-input/filter-input.component";
 
 @Component({
   standalone: true,
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, FilterInputComponent],
 })
 export class HeaderComponent {
 

@@ -1,0 +1,21 @@
+<div class="flex items-center gap-3">
+  <input
+    type="text"
+    placeholder="Filter..."
+    class="px-3 py-2 bg-white text-gray-800 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-white w-full max-w-xs"
+    data-testid="filter-input"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="emitSearchTerm()"
+  />
+
+  @if (searchTerm().length) {
+    <button
+      class="text-white hover:text-red-300 transition-colors duration-150 text-xl font-bold"
+      data-testid="filter-input-reset"
+      (click)="searchTerm.set('')"
+      aria-label="Clear search"
+    >
+      ✕
+    </button>
+  }
+</div>
