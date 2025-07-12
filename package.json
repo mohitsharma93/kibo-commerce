@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "build:prod": "npm run e2e:playwright && ng build",
     "code-coverage": "ng test --no-watch --code-coverage",
     "e2e:playwright": "npx playwright test ",
     "e2e:playwright-ui": "npx playwright test --ui",

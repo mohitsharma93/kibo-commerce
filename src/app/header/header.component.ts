@@ -1,17 +1,15 @@
 import { Component, DestroyRef, inject } from '@angular/core';
 import { BehaviourService } from '../services/behaviour-service';
-import { CartItems } from '../types/products';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { elementIsVisibleInViewport } from '../utils';
 import { FilterInputComponent } from "../filter-input/filter-input.component";
 
 @Component({
   standalone: true,
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [CommonModule, FilterInputComponent],
+  imports: [CommonModule],
 })
 export class HeaderComponent {
 
