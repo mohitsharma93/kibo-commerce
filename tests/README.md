@@ -25,4 +25,4 @@ tests/
 * **fixtures/** Contains setup and teardown logic, such as initializing application state or navigating to a specific page. Fixtures ensure tests run with consistent preconditions.
 * **`<page>`.spec.ts**  Test specification files containing actual test cases for the corresponding page. These files use the page objects and fixtures to perform assertions and validate application behavior.
 
-This structure keeps tests modular, maintainable, and organized by
+This structure keeps tests modular, maintainable, and organized.
